@@ -115,3 +115,31 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+" Performance improvments
+if has("mac")
+  set nocursorline
+
+  if exists("+relativenumber")
+    set norelativenumber
+  endif
+
+  set foldlevel=0
+  set foldmethod=manual
+endif
+
+" disable auto matching parens
+let g:loaded_matchparen=1
+set nolist
+set lazyredraw
+set ttyfast
+
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "passive_filetypes": ["scss"] }
+
+let NERDTreeMapOpenInTab='\r'

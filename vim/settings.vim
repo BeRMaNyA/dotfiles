@@ -13,3 +13,6 @@ for fpath in split(globpath(vimsettings, '*.vim'), '\n')
 
   exe 'source' fpath
 endfor
+
+" plugin installed manually
+set runtimepath^=~/.vim/bundle/vim-gitgutter/
